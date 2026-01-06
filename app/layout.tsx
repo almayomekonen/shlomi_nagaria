@@ -3,6 +3,7 @@ import "./globals.css";
 import { CartProvider } from "@/components/cart/CartContext";
 import PreviousPathTracker from "@/components/Navigation/PreviousPathTracker";
 import FloatingBack from "@/components/Navigation/FloatingBack";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "נגריית האינטרנט - פתרונות רהיטים מותאמים אישית",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <CartProvider>
           <PreviousPathTracker />
           <FloatingBack />
+          <Header />
           {children}
         </CartProvider>
         <script

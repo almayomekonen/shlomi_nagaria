@@ -48,9 +48,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white pt-16 pb-8">
       <div className="container-custom">
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Contact Section */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-accent-400">
               {footerData.contact.title}
@@ -69,7 +67,6 @@ export default function Footer() {
                 );
               })}
             </div>
-            {/* Social Media */}
             <div className="mt-6 flex gap-4">
               <a
                 href="#"
@@ -86,7 +83,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Info Links */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-primary-400">
               {footerData.info.title}
@@ -105,7 +101,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services Links */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-primary-400">
               {footerData.services.title}
@@ -124,7 +119,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Popular Categories */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-primary-400">
               {footerData.popular.title}
@@ -144,7 +138,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
           <p className="mb-2">
             כל הזכויות שמורות לנגריית האינטרנט © {new Date().getFullYear()}

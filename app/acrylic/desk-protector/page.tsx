@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function DeskProtectorPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="מגן לשולחן מפרספקס"
         description="הגנו על משטח השולחן שלכם עם מגן פרספקס שקוף ואיכותי. חיתוך מדויק לפי המידות, קצוות מלוטשים ובטוחים. מושלם לשולחנות כתיבה, משרד, או כל משטח שרוצים לשמור עליו."

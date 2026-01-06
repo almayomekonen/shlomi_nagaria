@@ -82,7 +82,6 @@ export function calculateBoardItemPrice(
     throw new Error(`Area too large. Maximum: ${PRICING_CONSTRAINTS.maxAreaSqM} m²`);
   }
   
-  // Get modifiers
   const materialModifier = getMaterialModifier(input.materialId);
   const boardTypeModifier = getBoardTypeModifier(input.boardTypeId);
   

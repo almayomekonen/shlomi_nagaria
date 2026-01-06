@@ -56,7 +56,6 @@ export default function CategoriesGrid() {
   return (
     <section className="py-20 bg-white">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4 text-gray-900">המגוון השלם שלנו</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -64,29 +63,24 @@ export default function CategoriesGrid() {
           </p>
         </div>
 
-        {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <div
               key={index}
               className="card p-6 hover:transform hover:scale-105 transition-all duration-300"
             >
-              {/* Icon/Number Badge */}
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-4 text-white font-bold text-xl">
                 {index + 1}
               </div>
 
-              {/* Title */}
               <h3 className="heading-sm mb-3 text-gray-900">
                 {category.title}
               </h3>
 
-              {/* Description */}
               <p className="text-gray-600 mb-6 leading-relaxed">
                 {category.description}
               </p>
 
-              {/* Buttons */}
               <div className="space-y-2">
                 {category.buttons.map((button, btnIndex) => {
                   // Map buttons to their routes

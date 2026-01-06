@@ -26,7 +26,6 @@ export const MATERIAL_PRICE_MODIFIERS: Record<string, number> = {
   'mdf-melamine': 1.2,
   'osb': 0.85,
   'plywood': 1.4,
-  // Add more as materials are defined
 };
 
 /**

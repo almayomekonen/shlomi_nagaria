@@ -46,7 +46,6 @@ export default function CartPageContent() {
                 נראה שעדיין לא הוספת מוצרים לסל. התחל לבנות את ההזמנה שלך עכשיו!
               </p>
 
-              {/* Popular suggestions */}
               <div className="bg-blue-50 rounded-xl p-6 mb-8">
                 <h3 className="font-bold text-gray-900 mb-4">
                   💡 מה אפשר להזמין?
@@ -87,7 +86,6 @@ export default function CartPageContent() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container-custom">
-        {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
             סל הקניות שלך
@@ -103,7 +101,6 @@ export default function CartPageContent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {items.map((item) => {
               const configSummary = formatConfigurationSummary(
@@ -116,10 +113,8 @@ export default function CartPageContent() {
                   className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden"
                 >
                   <div className="md:flex">
-                    {/* Product Image/Visual */}
                     <div className="md:w-64 bg-gradient-to-br from-gray-100 to-gray-200 p-6 flex items-center justify-center">
                       <div className="text-center">
-                        {/* Main Product Icon / Thumbnail */}
                         <div className="w-32 h-32 mx-auto mb-4 bg-white rounded-lg shadow-inner flex items-center justify-center overflow-hidden">
                           {item.thumbnailUrl ? (
                             <Image
@@ -134,7 +129,6 @@ export default function CartPageContent() {
                           )}
                         </div>
 
-                        {/* Configuration Badges */}
                         <div className="space-y-2">
                           {item.configuration?.boardTypeId && (
                             <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
@@ -157,7 +151,6 @@ export default function CartPageContent() {
                           )}
                         </div>
 
-                        {/* Dimensions Display */}
                         <div className="mt-4 bg-white rounded-lg p-3 shadow-sm">
                           <div className="text-2xl font-bold text-primary-600">
                             {item.configuration?.widthCm} ×{" "}
@@ -168,7 +161,6 @@ export default function CartPageContent() {
                       </div>
                     </div>
 
-                    {/* Product Details */}
                     <div className="flex-1 p-6">
                       <div className="flex justify-between items-start mb-4">
                         <div>
@@ -182,7 +174,6 @@ export default function CartPageContent() {
                           )}
                         </div>
 
-                        {/* Price on mobile */}
                         <div className="md:hidden text-left">
                           <div className="text-2xl font-bold text-primary-600">
                             {formatPrice(item.totalPrice)}
@@ -190,7 +181,6 @@ export default function CartPageContent() {
                         </div>
                       </div>
 
-                      {/* Configuration Summary with Icons */}
                       {configSummary.length > 0 && (
                         <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-4 mb-4 border border-blue-100">
                           <h4 className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2">
@@ -223,7 +213,6 @@ export default function CartPageContent() {
                         </div>
                       )}
 
-                      {/* Quantity Controls & Actions */}
                       <div className="flex items-center justify-between flex-wrap gap-4">
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-2">
@@ -271,7 +260,6 @@ export default function CartPageContent() {
                             </div>
                           </div>
 
-                          {/* Remove Button */}
                           <button
                             onClick={() => removeItem(item.id)}
                             className="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors border border-red-200 hover:border-red-300"
@@ -282,7 +270,6 @@ export default function CartPageContent() {
                           </button>
                         </div>
 
-                        {/* Price - Desktop */}
                         <div className="hidden md:block text-left">
                           <div className="text-sm text-gray-600 mb-1">
                             מחיר ליחידה: {formatPrice(item.unitPrice)}
@@ -302,7 +289,6 @@ export default function CartPageContent() {
               );
             })}
 
-            {/* Clear Cart Button */}
             {items.length > 1 && (
               <button
                 onClick={clearCart}
@@ -313,10 +299,8 @@ export default function CartPageContent() {
             )}
           </div>
 
-          {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden sticky top-24">
-              {/* Header */}
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6">
                 <h2 className="text-2xl font-bold flex items-center gap-2">
                   <span>🛒</span>
@@ -325,7 +309,6 @@ export default function CartPageContent() {
               </div>
 
               <div className="p-6">
-                {/* Totals Breakdown */}
                 <div className="space-y-4 mb-6 pb-6 border-b-2 border-gray-200">
                   <div className="flex justify-between items-center bg-gray-50 rounded-lg p-3">
                     <span className="text-gray-700 font-medium">
@@ -352,7 +335,6 @@ export default function CartPageContent() {
                     </span>
                   </div>
 
-                  {/* Shipping info */}
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
                     <div className="flex items-start gap-2">
                       <span className="text-yellow-600">ℹ️</span>
@@ -366,7 +348,6 @@ export default function CartPageContent() {
                   </div>
                 </div>
 
-                {/* Total */}
                 <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl p-4 mb-6 border-2 border-primary-200">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-lg font-bold text-gray-900">
@@ -381,7 +362,6 @@ export default function CartPageContent() {
                   </div>
                 </div>
 
-                {/* Checkout Button with Grow Payment */}
                 {isValidPaymentAmount(totals.subtotal) ? (
                   <a
                     href={generateGrowCheckoutLink(
@@ -410,7 +390,6 @@ export default function CartPageContent() {
                   </button>
                 )}
 
-                {/* Continue Shopping */}
                 <Link
                   href="/"
                   className="block w-full px-6 py-3 text-center border-2 border-primary-600 text-primary-600 hover:bg-primary-50 font-bold rounded-xl transition-all"
@@ -418,7 +397,6 @@ export default function CartPageContent() {
                   המשך בקנייה
                 </Link>
 
-                {/* Additional Info */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <span>✨</span>
@@ -452,7 +430,6 @@ export default function CartPageContent() {
                   </ul>
                 </div>
 
-                {/* Cart saved notice */}
                 <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-3">
                   <div className="flex items-start gap-2 text-sm text-blue-800">
                     <span>💾</span>

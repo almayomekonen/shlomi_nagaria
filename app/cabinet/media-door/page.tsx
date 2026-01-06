@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function MediaDoorPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="דלת למדיה אינטגרלי"
         description="דלת אלגנטית למערכת המדיה שלכם שמשתלבת באופן מושלם בעיצוב הסלון. ניתנת להתקנה בארון קיים או במערכת מיוחדת. כוללת מנגנון פתיחה חכם ואפשרות לפתחים לכבלים ושלט רחוק."

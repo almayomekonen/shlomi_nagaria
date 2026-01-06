@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 export default function PolycarbonatePage() {
   return (
     <main className="min-h-screen">
-      <Header />
+      
       <ProductPage
         title="פוליקרבונט לפי מידה"
         description="לוחות פוליקרבונט חזקים ועמידים במיוחד, בחיתוך מדויק לפי המידות שלכם. עמידים לשבירה פי 250 מזכוכית! מתאימים לקירוי, מחיצות, הגנות, תעשייה ועיצוב חוץ."

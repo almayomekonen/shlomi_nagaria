@@ -25,7 +25,6 @@ export default function RelatedProductsSection({ products }: RelatedProductsSect
             key={product.id}
             className="card overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
           >
-            {/* Image */}
             <Link href={product.route} className="block relative h-56 bg-gray-100 overflow-hidden group/image">
               <Image
                 src={product.image}
@@ -33,7 +32,6 @@ export default function RelatedProductsSection({ products }: RelatedProductsSect
                 fill
                 className="object-cover group-hover/image:scale-110 transition-transform duration-500"
               />
-              {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
                   <span className="text-primary-600 font-bold">לחץ לפרטים</span>
@@ -41,7 +39,6 @@ export default function RelatedProductsSection({ products }: RelatedProductsSect
               </div>
             </Link>
 
-            {/* Content */}
             <div className="p-6">
               <Link href={product.route}>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
@@ -49,7 +46,6 @@ export default function RelatedProductsSection({ products }: RelatedProductsSect
                 </h3>
               </Link>
               
-              {/* Description bullets */}
               <ul className="space-y-2 mb-4">
                 {product.description.map((item, index) => (
                   <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
@@ -59,7 +55,6 @@ export default function RelatedProductsSection({ products }: RelatedProductsSect
                 ))}
               </ul>
 
-              {/* Price Display */}
               <div className="mb-4 pb-4 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-gray-600 text-sm">
@@ -83,7 +78,6 @@ export default function RelatedProductsSection({ products }: RelatedProductsSect
                 )}
               </div>
 
-              {/* Action Button */}
               <Link
                 href={product.route}
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-l from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-bold rounded-lg transition-all shadow-md hover:shadow-lg group"

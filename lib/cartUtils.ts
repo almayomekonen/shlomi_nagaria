@@ -82,7 +82,6 @@ export function formatConfigurationSummary(
   
   const summary: string[] = [];
   
-  // Handle board configuration
   if ('widthCm' in config && 'lengthCm' in config) {
     summary.push(`מידות: ${config.widthCm} × ${config.lengthCm} ס"מ`);
     

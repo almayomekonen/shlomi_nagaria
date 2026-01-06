@@ -4,7 +4,6 @@ export default function BoardInstructions() {
   return (
     <div className="bg-white rounded-xl shadow-md p-8 mb-8">
       <div className="max-w-4xl mx-auto space-y-10">
-        {/* Section 1 */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-primary-500">
             איך לבצע הזמנה?
@@ -37,7 +36,6 @@ export default function BoardInstructions() {
           </div>
         </div>
 
-        {/* Section 2 */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-accent-500">
             איך מודדים את הלוח?
@@ -57,7 +55,6 @@ export default function BoardInstructions() {
           </div>
         </div>
 
-        {/* Section 3 */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-primary-500">
             מדידת האורך
@@ -76,7 +73,6 @@ export default function BoardInstructions() {
           </div>
         </div>
 
-        {/* Section 4 */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-accent-500">
             מדידת הרוחב / עומק
@@ -95,7 +91,6 @@ export default function BoardInstructions() {
           </div>
         </div>
 
-        {/* Section 5 */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-primary-500">
             טיפים למדידה מדויקת

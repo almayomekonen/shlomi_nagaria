@@ -62,7 +62,6 @@ export default function BoardDimensionsForm({
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Width Input */}
           <div>
             <label
               htmlFor="width-input"
@@ -131,7 +130,6 @@ export default function BoardDimensionsForm({
             </div>
           </div>
 
-          {/* Length Input */}
           <div>
             <label
               htmlFor="length-input"

@@ -61,7 +61,6 @@ export default function ProductPage({
 
   return (
     <div className="min-h-screen bg-gray-50 pt-20">
-      {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="container-custom py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -89,13 +88,10 @@ export default function ProductPage({
         </div>
       </div>
 
-      {/* Main Layout: Fixed Image Right, Scrollable Content Left */}
       <div className="container-custom py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Right Side - Fixed Image (becomes top on mobile) */}
           <div className="lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)] order-1 lg:order-2">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full flex flex-col">
-              {/* Progress Bar */}
               <div className="bg-gray-100 p-4 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-700">
@@ -123,7 +119,6 @@ export default function ProductPage({
                 )}
               </div>
 
-              {/* Main Image */}
               <div className="relative flex-1 min-h-[300px]">
                 <img
                   src={mainImage}
@@ -134,7 +129,6 @@ export default function ProductPage({
                   ⚡ משלוח ב-5 ימים
                 </div>
                 
-                {/* Quick Help Button */}
                 <div className="absolute bottom-4 right-4">
                   <a
                     href="https://wa.me/972525090556"
@@ -148,7 +142,6 @@ export default function ProductPage({
                 </div>
               </div>
 
-              {/* Gallery Thumbnails */}
               {galleryImages.length > 0 && (
                 <div className="p-4 grid grid-cols-4 gap-2 bg-gray-50">
                   {galleryImages.slice(0, 4).map((img, index) => (
@@ -166,7 +159,6 @@ export default function ProductPage({
                 </div>
               )}
 
-              {/* Features List */}
               {features.length > 0 && (
                 <div className="p-6 space-y-3">
                   <h3 className="font-bold text-lg text-gray-900 mb-4">
@@ -186,9 +178,7 @@ export default function ProductPage({
             </div>
           </div>
 
-          {/* Left Side - Scrollable Content */}
           <div className="order-2 lg:order-1 space-y-8">
-            {/* Page Header */}
             <div className="bg-white rounded-2xl shadow-md p-8">
               <h1 className="heading-lg text-gray-900 mb-4">{title}</h1>
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -196,7 +186,6 @@ export default function ProductPage({
               </p>
             </div>
 
-            {/* Dimensions Form */}
             <BoardDimensionsForm
               width={config.width}
               length={config.length}
@@ -204,40 +193,34 @@ export default function ProductPage({
               onLengthChange={(value) => setConfig({ ...config, length: value })}
             />
 
-            {/* Board Type Selector */}
             <BoardTypeSelector
               boardTypes={boardTypes}
               selectedId={config.boardTypeId}
               onSelect={(id) => setConfig({ ...config, boardTypeId: id })}
             />
 
-            {/* Material Selector */}
             <MaterialSelector
               materials={materialOptions}
               selectedId={config.materialId}
               onSelect={(id) => setConfig({ ...config, materialId: id })}
             />
 
-            {/* Color Selector */}
             <ColorSelector
               colors={colorOptions}
               selectedId={config.colorId}
               onSelect={(id) => setConfig({ ...config, colorId: id })}
             />
 
-            {/* Edge Banding Selector */}
             <EdgeBandingSelector
               options={edgeBandingOptions}
               selectedId={config.edgeBandingId}
               onSelect={(id) => setConfig({ ...config, edgeBandingId: id })}
             />
 
-            {/* Order Actions - Sticky at bottom on mobile */}
             <div className="sticky bottom-0 lg:relative bg-gray-50 lg:bg-transparent -mx-4 px-4 lg:mx-0 lg:px-0 py-4 lg:py-0 shadow-lg lg:shadow-none">
               <OrderSummaryActions config={config} />
             </div>
 
-            {/* Additional Info */}
             <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
               <h3 className="font-bold text-lg text-blue-900 mb-3 flex items-center gap-2">
                 <span>💡</span>
@@ -259,7 +242,6 @@ export default function ProductPage({
               </ul>
             </div>
 
-            {/* Why Choose Us */}
             <div className="bg-gradient-to-br from-primary-600 to-accent-600 rounded-xl p-6 text-white">
               <h3 className="font-bold text-xl mb-4">למה לבחור בנו?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

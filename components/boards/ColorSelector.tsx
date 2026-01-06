@@ -29,7 +29,6 @@ export default function ColorSelector({
             onClick={() => onSelect(color.id)}
             className="flex flex-col items-center group"
           >
-            {/* Color Swatch with Image */}
             <div
               className={`relative w-24 h-24 rounded-lg overflow-hidden shadow-md transition-all ${
                 selectedId === color.id
@@ -37,7 +36,6 @@ export default function ColorSelector({
                   : 'hover:scale-105 hover:shadow-lg'
               }`}
             >
-              {/* Material Image */}
               {color.image ? (
                 <Image
                   src={color.image}
@@ -47,11 +45,9 @@ export default function ColorSelector({
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                 />
               ) : (
-                /* Fallback to color class if no image */
                 <div className={`w-full h-full ${color.colorClass}`}></div>
               )}
 
-              {/* Selected Indicator */}
               {selectedId === color.id && (
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                   <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
@@ -61,7 +57,6 @@ export default function ColorSelector({
               )}
             </div>
 
-            {/* Label */}
             <span className={`mt-2 text-sm text-center font-medium transition-colors ${
               selectedId === color.id
                 ? 'text-primary-700'

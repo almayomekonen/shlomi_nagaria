@@ -16,7 +16,7 @@ const galleryProjects = [
     category: "ריהוט לסלון",
     description:
       "ספרייה גדולה ואלגנטית מעץ אלון עם מדפים מתכווננים ותאורת LED משולבת",
-    image: "/images/img4.webp",
+    image: "/images-2/sifria.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const galleryProjects = [
     category: "מטבחים",
     description:
       "מערכת ארונות מטבח מלאה בעיצוב מודרני עם משטחי קוריאן ומנגנוני soft-close",
-    image: "/images/img2.webp",
+    image: "/images-2/midbax.png",
   },
   {
     id: 3,
@@ -32,14 +32,14 @@ const galleryProjects = [
     category: "רהיטים",
     description:
       "שולחן אוכל מהודר מעץ אגוז מלא עם גימור מבריק ובסיס מתכת מעוצב",
-    image: "/images/img1.webp",
+    image: "/images-2/shulxan.png",
   },
   {
     id: 4,
     title: "ארון בגדים מותאם",
     category: "ארונות",
     description: "ארון בגדים גדול עם דלתות הזזה, תאורה פנימית ומגירות ארגון",
-    image: "/images/img3.webp",
+    image: "/images-2/bgadim.png",
   },
   {
     id: 5,
@@ -47,14 +47,14 @@ const galleryProjects = [
     category: "ריהוט לסלון",
     description:
       "מזנון אלגנטי עם דלתות זכוכית, מדפים פנימיים ותאי אחסון מוסתרים",
-    image: "/images/img5.webp",
+    image: "/images-2/miznon.png",
   },
   {
     id: 6,
     title: "ארון נעליים מעוצב",
     category: "אחסון",
     description: "ארון נעליים חכם עם מדפים מתכווננים, אוורור טבעי וגימור עמיד",
-    image: "/images/img6.webp",
+    image: "/images-2/naalaim.png",
   },
 ];
 
@@ -62,7 +62,6 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50 pt-24 pb-16">
       <div className="container-custom">
-        {/* Page Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             גלריית עבודות
@@ -73,14 +72,12 @@ export default function GalleryPage() {
           </p>
         </div>
 
-        {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {galleryProjects.map((project) => (
             <div
               key={project.id}
               className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
-              {/* Project Image */}
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src={project.image}
@@ -89,13 +86,11 @@ export default function GalleryPage() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                {/* Category Badge */}
                 <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                   {project.category}
                 </div>
               </div>
 
-              {/* Project Info */}
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
                   {project.title}
@@ -108,7 +103,6 @@ export default function GalleryPage() {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl shadow-2xl p-12 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             רוצים גם אתם פרויקט כזה?
@@ -136,7 +130,6 @@ export default function GalleryPage() {
           </div>
         </div>
 
-        {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl font-bold text-primary-600 mb-2">500+</div>

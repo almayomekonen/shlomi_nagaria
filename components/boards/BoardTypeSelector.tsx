@@ -33,14 +33,12 @@ export default function BoardTypeSelector({
                 : 'ring-1 ring-gray-200 hover:ring-2 hover:ring-primary-300 shadow-md hover:shadow-lg'
             }`}
           >
-            {/* Selected Indicator */}
             {selectedId === board.id && (
               <div className="absolute top-3 left-3 z-10 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
                 <Check className="w-5 h-5 text-white" />
               </div>
             )}
 
-            {/* Image */}
             <div className="relative h-48 w-full bg-gray-100">
               <Image
                 src={board.image}
@@ -50,7 +48,6 @@ export default function BoardTypeSelector({
               />
             </div>
 
-            {/* Content */}
             <div className="p-5 bg-white">
               <h3 className="text-lg font-bold text-gray-900 mb-2">{board.name}</h3>
               <p className="text-sm text-gray-600 mb-3 leading-relaxed">

@@ -35,7 +35,6 @@ export function formatCartDescription(items: CartItem[]): string {
       `מחיר: ₪${item.unitPrice}`,
     ];
 
-    // Add configuration details if available
     if (item.configuration) {
       const config = item.configuration as any;
       

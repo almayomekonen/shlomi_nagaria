@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function CustomCutBoardPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="חיתוך עץ לפי מידה"
         description="הזמינו לוחות עץ, MDF או מלמין בחיתוך מדויק לפי המידות שלכם. בחרו מתוך מגוון חומרים, גוונים ואפשרויות גימור מקצועיות. משלוח מהיר לכל הארץ."

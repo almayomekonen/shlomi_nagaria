@@ -71,19 +71,16 @@ export default function EdgeBandingSelector({
                 : 'ring-1 ring-gray-200 hover:ring-2 hover:ring-primary-300 bg-white shadow-md hover:shadow-lg'
             }`}
           >
-            {/* Selected Indicator */}
             {selectedId === option.id && (
               <div className="absolute top-3 left-3 z-10 w-7 h-7 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
                 <Check className="w-4 h-4 text-white" />
               </div>
             )}
 
-            {/* Diagram */}
             <div className="mb-4">
               <EdgeBandingDiagram type={option.diagram} />
             </div>
 
-            {/* Text */}
             <h3 className="text-base font-bold text-gray-900 mb-2">{option.name}</h3>
             <p className="text-sm text-gray-600 leading-relaxed">{option.description}</p>
           </button>

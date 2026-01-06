@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function CabinetDoorsPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="דלתות וחזית מגירה לארון"
         description="העניקו מראה חדש לארון הקיים! דלתות וחזיתות מגירות מותאמות אישית לפי מידה. מגוון חומרים, צבעים וגימורים - מקלאסי ועד מודרני. כולל צירים ומנגנוני פתיחה."

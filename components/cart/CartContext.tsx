@@ -101,20 +101,16 @@ export function CartProvider({ children }: CartProviderProps) {
 
   const addItem = useCallback(
     (itemInput: CartItemInput) => {
-      // Validate quantity
       const validatedQuantity = validateQuantity(itemInput.quantity);
 
-      // Check if similar item already exists
       const existingItem = findSimilarItem(itemInput);
 
       if (existingItem) {
-        // Increment quantity of existing item
         updateQuantity(
           existingItem.id,
           existingItem.quantity + validatedQuantity
         );
       } else {
-        // Create new cart item
         const newItem: CartItem = {
           ...itemInput,
           id: generateCartItemId(),
@@ -126,7 +122,6 @@ export function CartProvider({ children }: CartProviderProps) {
           createdAt: new Date().toISOString(),
         };
 
-        // Add to cart
         setItems((prev) => [...prev, newItem]);
       }
     },
@@ -163,7 +158,6 @@ export function CartProvider({ children }: CartProviderProps) {
     setItems([]);
   }, []);
 
-  // Memoize context value to prevent unnecessary re-renders
   const contextValue = useMemo<CartContextValue>(
     () => ({
       items,

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 export default function PlywoodPage() {
   return (
     <main className="min-h-screen">
-      <Header />
+      
       <ProductPage
         title="דיקט לפי מידה"
         description="לוחות דיקט איכותיים בחיתוך מדויק לפי המידות שלכם. דיקט עמיד ואיכותי, מתאים לריהוט, בניה ופרויקטים מגוונים. זמין במגוון עוביים ומידות."

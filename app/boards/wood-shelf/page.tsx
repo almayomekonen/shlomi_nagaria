@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function WoodShelfPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="מדף עץ לפי מידה"
         description="מדפי עץ איכותיים בחיתוך מדויק לפי המידות שלכם. עץ מלא, MDF מצופה או מלמין - בחרו את החומר המתאים לכם. אפשרות לגימורים מגוונים וקנטים תואמים."

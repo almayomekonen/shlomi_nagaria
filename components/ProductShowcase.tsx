@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 interface Product {
@@ -8,6 +9,7 @@ interface Product {
   description: string;
   image: string;
   featured?: boolean;
+  link: string;
 }
 
 const products: Product[] = [
@@ -15,17 +17,21 @@ const products: Product[] = [
     title: 'לוחות עץ מותאמים אישית',
     description: 'לוחות MDF וסנדוויץ\' איכותיים בחיתוך מדויק. מתאימים לכל פרויקט בית או עסק, זמינים במגוון גדלים וצבעים. ניתנים לחיתוך מדויק לפי המידות שלך.',
     image: '/our-experts-images/1.png',
+    link: '/boards/custom-cut',
   },
   {
     title: 'מדפים מעוצבים לפי מידה',
     description: 'מדפי עץ מלא ו-MDF מעוצבים, מחוזקים ומהודרים. זמינים במגוון צבעים ועיבויים, עם אפשרות להתאמה מושלמת למרחב שלך ולסגנון העיצוב הרצוי.',
     image: '/our-experts-images/3.png',
     featured: true,
+    link: '/cabinet/shelves',
+
   },
   {
     title: 'שידות וארגזי אחסון מעוצבים',
     description: 'שידות מעוצבות לארון קיים או חדש. זמינות במגוון מידות וגוונים, מושלמות לארגון חלל עבודה, חדר שינה או כל חלל אחר. איכות פרימיום וביצוע מדויק.',
     image: '/our-experts-images/2.png',
+    link: '/custom-cabinet/shelving',
   },
 ];
 
@@ -33,7 +39,6 @@ export default function ProductShowcase() {
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4 text-gray-900">
             המומחיות שלנו
@@ -43,7 +48,6 @@ export default function ProductShowcase() {
           </p>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <div
@@ -54,7 +58,6 @@ export default function ProductShowcase() {
                   : 'shadow-lg hover:shadow-xl'
               } transition-all duration-300`}
             >
-              {/* Image */}
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src={product.image}
@@ -64,7 +67,6 @@ export default function ProductShowcase() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 
-                {/* Featured Badge */}
                 {product.featured && (
                   <div className="absolute top-4 right-4 bg-accent-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
                     ⭐ מבוקש ביותר
@@ -72,12 +74,11 @@ export default function ProductShowcase() {
                 )}
               </div>
 
-              {/* Content */}
               <div className="absolute bottom-0 right-0 left-0 p-6 text-white">
                 <h3 className="text-2xl font-bold mb-3">{product.title}</h3>
                 <p className="text-gray-200 mb-4 leading-relaxed">{product.description}</p>
                 <button className="flex items-center gap-2 bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-all duration-300 group-hover:gap-3">
-                  למידע נוסף
+                  <Link href={product.link} className="hover:text-white">למידע נוסף</Link>
                   <ArrowLeft className="w-4 h-4" />
                 </button>
               </div>
@@ -85,7 +86,6 @@ export default function ProductShowcase() {
           ))}
         </div>
 
-        {/* Additional Info Section */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="card p-8">
             <h3 className="heading-sm mb-4 text-primary-600">תהליך הזמנה פשוט</h3>
@@ -94,7 +94,7 @@ export default function ProductShowcase() {
               תהליך הייצור מהיר, מדויק ומקצועי.
             </p>
             <button className="btn-primary">
-              התחילו עכשיו
+              <Link href="/boards/custom-cut">התחילו עכשיו</Link> 
             </button>
           </div>
           <div className="card p-8 bg-gradient-to-br from-primary-600 to-accent-600 text-white">

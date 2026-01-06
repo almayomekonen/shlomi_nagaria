@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function PerspexPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="פרספקס לפי מידה"
         description="לוחות פרספקס (אקרילי) איכותיים בחיתוך מדויק CNC לפי המידות שלכם. זמין במגוון עוביים, צבעים וגימורים - שקוף, חלבי, צבעוני, מבריק או מאט. מתאים לעיצוב פנים, תצוגות, הגנות ועוד."

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ProductPage from "@/components/boards/ProductPage";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function LackerShelfPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <ProductPage
         title="מדף ליקר לפי מידה"
         description="מדפי ליקר (לכה) איכותיים עם גימור מבריק או מאט. MDF איכותי עם ציפוי ליקר מקצועי בגוונים מגוונים. מושלם למטבחים, חדרי שינה וסלונים מעוצבים."

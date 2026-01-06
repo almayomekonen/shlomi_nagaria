@@ -74,10 +74,8 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const pathname = usePathname();
 
-  // Access cart state
   const { totals } = useCart();
 
-  // Check if current path matches menu item
   const isActivePath = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
@@ -102,7 +100,6 @@ export default function Header() {
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center gap-4">
             <Link
               href="/"
@@ -112,9 +109,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Menu items */}
             <div className="flex items-center gap-1">
               {menuData.map((menu, index) => (
                 <div
@@ -138,7 +133,6 @@ export default function Header() {
                     )}
                   </Link>
 
-                  {/* Dropdown */}
                   {menu.items && activeDropdown === index && (
                     <div className="absolute top-full right-0 mt-1 w-64 bg-white shadow-xl rounded-lg overflow-hidden animate-fade-in">
                       <div className="py-2">
@@ -158,7 +152,6 @@ export default function Header() {
               ))}
             </div>
 
-            {/* Cart Icon */}
             <Link
               href="/cart"
               className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors"
@@ -173,9 +166,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button & Cart */}
           <div className="lg:hidden flex items-center gap-2">
-            {/* Cart Icon Mobile */}
             <Link
               href="/cart"
               className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors"
@@ -189,7 +180,6 @@ export default function Header() {
               )}
             </Link>
 
-            {/* Mobile Menu Toggle */}
             <button
               className="p-2 text-gray-700 hover:text-primary-600"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -204,7 +194,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 animate-fade-in">
             <div className="space-y-2 mt-4">

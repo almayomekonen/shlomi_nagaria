@@ -27,7 +27,6 @@ export default function CustomCutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="container-custom py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -40,7 +39,6 @@ export default function CustomCutPage() {
         </div>
       </div>
 
-      {/* Page Header */}
       <div className="bg-gradient-to-b from-white to-gray-50 border-b border-gray-200">
         <div className="container-custom py-12">
           <h1 className="heading-lg text-gray-900 mb-4">
@@ -53,12 +51,9 @@ export default function CustomCutPage() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="container-custom py-12">
-        {/* Intro Section with Images */}
         <BoardIntroSection />
 
-        {/* Dimensions Form */}
         <BoardDimensionsForm
           width={config.width}
           length={config.length}
@@ -66,41 +61,34 @@ export default function CustomCutPage() {
           onLengthChange={(value) => setConfig({ ...config, length: value })}
         />
 
-        {/* Board Type Selector */}
         <BoardTypeSelector
           boardTypes={boardTypes}
           selectedId={config.boardTypeId}
           onSelect={(id) => setConfig({ ...config, boardTypeId: id })}
         />
 
-        {/* Material Selector */}
         <MaterialSelector
           materials={materialOptions}
           selectedId={config.materialId}
           onSelect={(id) => setConfig({ ...config, materialId: id })}
         />
 
-        {/* Color Selector */}
         <ColorSelector
           colors={colorOptions}
           selectedId={config.colorId}
           onSelect={(id) => setConfig({ ...config, colorId: id })}
         />
 
-        {/* Edge Banding Selector */}
         <EdgeBandingSelector
           options={edgeBandingOptions}
           selectedId={config.edgeBandingId}
           onSelect={(id) => setConfig({ ...config, edgeBandingId: id })}
         />
 
-        {/* Order Actions */}
         <OrderSummaryActions config={config} />
 
-        {/* Instructions */}
         <BoardInstructions />
 
-        {/* Related Products */}
         <RelatedProductsSection products={relatedProducts} />
       </div>
     </div>

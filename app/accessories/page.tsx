@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
@@ -11,7 +11,7 @@ export const metadata = {
 export default function AccessoriesPage() {
   return (
     <main className="min-h-screen">
-      <Header />
+      
       <div className="container-custom py-16 text-right">
         <h1 className="text-4xl font-bold mb-6 text-gray-900">אביזרים ואלמנטים נוספים</h1>
         <p className="text-xl text-gray-700 leading-relaxed mb-8">
