@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Check } from 'lucide-react';
-import { BoardType } from '@/types/boards';
+import Image from "next/image";
+import { Check } from "lucide-react";
+import { BoardType } from "@/types/boards";
 
 interface BoardTypeSelectorProps {
   boardTypes: BoardType[];
@@ -29,8 +29,8 @@ export default function BoardTypeSelector({
             onClick={() => onSelect(board.id)}
             className={`relative text-right rounded-xl overflow-hidden transition-all ${
               selectedId === board.id
-                ? 'ring-4 ring-primary-500 shadow-xl'
-                : 'ring-1 ring-gray-200 hover:ring-2 hover:ring-primary-300 shadow-md hover:shadow-lg'
+                ? "ring-4 ring-primary-500 shadow-xl"
+                : "ring-1 ring-gray-200 hover:ring-2 hover:ring-primary-300 shadow-md hover:shadow-lg"
             }`}
           >
             {selectedId === board.id && (
@@ -49,8 +49,10 @@ export default function BoardTypeSelector({
             </div>
 
             <div className="p-5 bg-white">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{board.name}</h3>
-              <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                {board.name}
+              </h3>
+              <p className="text-sm text-gray-600 mb-3 whitespace-nowrap-line leading-relaxed">
                 {board.description}
               </p>
               <div className="inline-block px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm font-semibold">
@@ -63,4 +65,3 @@ export default function BoardTypeSelector({
     </div>
   );
 }
-

@@ -73,7 +73,7 @@ export default function CategoriesGrid() {
                 {index + 1}
               </div>
 
-              <h3 className="heading-sm mb-3 text-gray-900">
+              <h3 className="text-lg whitespace-nowrap font-bold mb-3 text-gray-900">
                 {category.title}
               </h3>
 

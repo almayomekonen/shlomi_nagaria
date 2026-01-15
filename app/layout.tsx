@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "נגריית האינטרנט - פתרונות רהיטים מותאמים אישית",
   description:
     "פתרונות נגרות מותאמים אישית לבית ולעסק. מדפים, ארונות, שולחנות ועוד",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +29,7 @@ export default function RootLayout({
           <Header />
           {children}
         </CartProvider>
+
         <script
           src="https://cdn.userway.org/widget.js"
           data-account="TTAjoriQmo"

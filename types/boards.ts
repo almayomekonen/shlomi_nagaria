@@ -27,7 +27,7 @@ export interface EdgeBandingOption {
   id: string;
   name: string;
   description: string;
-  diagram: 'none' | 'long-sides' | 'all-sides' | 'single';
+  diagram: "none" | "long-sides" | "all-sides" | "single";
 }
 
 export interface RelatedProduct {
@@ -36,9 +36,9 @@ export interface RelatedProduct {
   description: string[];
   image: string;
   route: string;
-  priceFrom: number;  // "Starting from" price
-  priceType: 'configurable' | 'fixed';  // Does it need configuration?
-  standardSpecs?: string;  // What the base price includes
+  priceFrom: number;
+  priceType: "configurable" | "fixed";
+  standardSpecs?: string;
 }
 
 export interface BoardConfiguration {
@@ -49,4 +49,3 @@ export interface BoardConfiguration {
   colorId: string | null;
   edgeBandingId: string | null;
 }
-
